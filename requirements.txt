@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# Flask Web 框架
+flask>=3.0.0
+werkzeug>=3.0.0
+
+# 网页渲染和浏览器控制
+playwright>=1.40.0
+
+# HTML 解析和处理
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# Markdown 转换
+markdownify>=0.11.0
+
+# HTTP 请求处理
+requests>=2.31.0
+
+# 日志和配置
+python-dotenv>=1.0.0
+
+# 开发和测试工具
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
