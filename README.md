@@ -63,7 +63,7 @@ import requests
 
 # 获取网页的 Markdown 内容
 response = requests.get(
-    "http://localhost:8080/target",
+    "http://localhost:9097/target",
     params={"url": "https://example.com/article"},
     headers={"Authorization": "Bearer YOUR_TOKEN"}
 )
@@ -167,11 +167,11 @@ GET /target?url=https://example.com
 ```bash
 # 转换示例网页
 curl -H "Authorization: Bearer YOUR_TOKEN" \
-     "http://localhost:8080/target?url=https://httpbin.org/html"
+     "http://localhost:9097/target?url=https://httpbin.org/html"
 
 # 转换 GitHub README
 curl -H "Authorization: Bearer YOUR_TOKEN" \
-     "http://localhost:8080/target?url=https://github.com/microsoft/playwright"
+     "http://localhost:9097/target?url=https://github.com/microsoft/playwright"
 ```
 
 ### 健康检查
@@ -183,7 +183,7 @@ GET /health
 **示例：**
 
 ```bash
-curl http://localhost:8080/health
+curl http://localhost:9097/health
 ```
 
 **响应：**
@@ -419,7 +419,7 @@ services:
   web2md:
     build: .
     ports:
-      - "8080:8080"
+      - "9097:8080"
     environment:
       - BEARER_TOKEN=${BEARER_TOKEN}
       - ENABLE_BEARER_AUTH=True
@@ -551,7 +551,7 @@ python run.py
 
 ```bash
 # 查找占用端口的进程
-lsof -ti:8080
+lsof -ti:9097
 
 # 修改端口
 export FLASK_PORT=8081
