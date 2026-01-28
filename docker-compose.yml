@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web2md:
-    build: .
+    image: docker.cnb.cool/xscan/web2md:latest
     ports:
       - "8080:8080"
     environment:
