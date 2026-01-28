@@ -15,7 +15,11 @@
 
 ---
 
-## ✨ 功能特性
+## 🎯 什么是 Web2MD？
+
+**Web2MD** 是一个强大的网页内容提取和转换服务，可以将任何网页 URL 转换为干净的 Markdown 格式文本。
+
+### 核心功能
 
 - 🌐 **完整网页渲染**：使用 Playwright + Chromium 处理 JavaScript 动态内容
 - 📝 **智能内容提取**：自动识别主要内容区域，过滤导航和广告
@@ -24,6 +28,53 @@
 - 📊 **详细日志**：完整的请求日志、错误日志和性能监控
 - 🛡️ **错误处理**：全面的异常处理和用户友好的错误响应
 - 🐳 **Docker 支持**：提供完整的容器化部署方案
+
+### 使用场景
+
+#### 🤖 AI 应用集成
+
+**让 AI 理解网页内容**
+- LLM 应用需要获取和分析网页内容时，提供干净的结构化文本
+- RAG 系统中，将网页知识转换为 Markdown 便于向量化和检索
+- AI Agent 需要读取网页信息时，提供纯文本格式减少 Token 消耗
+
+**典型工作流：**
+```
+网页 URL → Web2MD → Markdown → AI 处理 → 结构化输出
+```
+
+#### 📚 内容管理与归档
+
+- 将在线文章、博客转换为 Markdown 便于本地保存
+- 技术文档自动归档和版本管理
+- 知识库系统的内容抓取和整理
+
+#### 📊 数据采集与分析
+
+- 批量网页内容提取和分析
+- 竞品监控和价格比较
+- 新闻和舆情监控
+
+#### 🔗 API 集成示例
+
+**AI 应用调用示例：**
+```python
+import requests
+
+# 获取网页的 Markdown 内容
+response = requests.get(
+    "http://localhost:8080/target",
+    params={"url": "https://example.com/article"},
+    headers={"Authorization": "Bearer YOUR_TOKEN"}
+)
+
+markdown_content = response.text
+
+# 直接喂给 AI
+# ai_response = openai.ChatCompletion.create(
+#     messages=[{"role": "user", "content": markdown_content}]
+# )
+```
 
 ---
 
@@ -565,9 +616,29 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ---
 
-## 👥 作者
+## 👨‍💻 项目起源
 
-Web2MD 开发团队
+> **"Pure Vibe Coding with AI"** 🚀
+
+本项目由 **GLM (智谱清言)** + **Claude Code** 协作生成，全程采用 AI 辅助编程（Vibe Coding）模式。
+
+### 技术栈
+
+- **AI 助手**：GLM-4 + Claude Sonnet 4.5
+- **开发模式**：Natural Language → Code
+- **代码质量**：AI 生成，人工审查
+
+### AI 辅助开发流程
+
+1. **需求定义**：自然语言描述功能需求
+2. **架构设计**：AI 辅助设计项目结构
+3. **代码生成**：AI 生成核心代码
+4. **测试验证**：自动化测试 + 人工验证
+5. **文档编写**：AI 生成完整文档
+
+这种开发方式证明了 AI 辅助编程的可行性和效率，展示了未来软件开发的新模式。
+
+---
 
 ---
 
@@ -586,6 +657,6 @@ Web2MD 开发团队
 
 **如果这个项目对您有帮助，请给个 ⭐️**
 
-Made with ❤️ by Web2MD Team
+Made with ❤️ & 🤖 by GLM + Claude Code (Pure Vibe Coding)
 
 </div>
